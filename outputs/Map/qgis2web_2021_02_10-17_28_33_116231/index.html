@@ -32,10 +32,15 @@
         <script src="js/labels.js"></script>
         <script src="data/Lattevaccino_1.js"></script>
         <script src="data/Vigneti_2.js"></script>
+        <!-- For the fullscreen button -->
+        <script src='https://api.mapbox.com/mapbox.js/plugins/leaflet-fullscreen/v1.0.1/Leaflet.fullscreen.min.js'></script>
+        <link href='https://api.mapbox.com/mapbox.js/plugins/leaflet-fullscreen/v1.0.1/leaflet.fullscreen.css' rel='stylesheet' />
+        <!-- End fullscreen button-->
         <script>
         var map = L.map('map', {
             zoomControl:true, maxZoom:28, minZoom:1
         }).fitBounds([[40.58089736200915,14.297684814794485],[40.75755776030597,14.616124185205551]]);
+        map.addControl(new L.Control.Fullscreen());
         var hash = new L.Hash(map);
         map.attributionControl.setPrefix('<a href="https://github.com/tomchadwin/qgis2web" target="_blank">qgis2web</a> &middot; <a href="https://leafletjs.com" title="A JS library for interactive maps">Leaflet</a> &middot; <a href="https://qgis.org">QGIS</a>');
         var autolinker = new Autolinker({truncate: {length: 30, location: 'smart'}});
