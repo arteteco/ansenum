@@ -40,9 +40,9 @@
         var map = L.map('map', {
             zoomControl:true, maxZoom:28, minZoom:1
         }).fitBounds([[40.58089736200915,14.297684814794485],[40.75755776030597,14.616124185205551]]);
-        map.addControl(new L.Control.Fullscreen());
+         map.addControl(new L.Control.Fullscreen());
         var hash = new L.Hash(map);
-        map.attributionControl.setPrefix('<a href="https://github.com/tomchadwin/qgis2web" target="_blank">qgis2web</a> &middot; <a href="https://leafletjs.com" title="A JS library for interactive maps">Leaflet</a> &middot; <a href="https://qgis.org">QGIS</a>');
+        map.attributionControl.setPrefix('© <a href="https://www.openstreetmap.org/copyright" target="blank">OpenStreetMap</a> &middot; <a href="https://github.com/tomchadwin/qgis2web" target="_blank">qgis2web</a> &middot; <a href="https://leafletjs.com" title="A JS library for interactive maps">Leaflet</a> &middot; <a href="https://qgis.org">QGIS</a>; <a href="https://github.com/arteteco/ansenum">Source</a>');
         var autolinker = new Autolinker({truncate: {length: 30, location: 'smart'}});
         var bounds_group = new L.featureGroup([]);
         function setBounds() {
@@ -113,8 +113,7 @@
         function pop_Vigneti_2(feature, layer) {
             var popupContent = '<table>\
                     <tr>\
-                        <th scope="row">Area</th>\
-                        <td>' + (feature.properties['CT24_AREA'] !== null ? autolinker.link(feature.properties['CT24_AREA'].toLocaleString()) : '') + '</td>\
+                        <td colspan="2">' + (feature.properties['CT24_AREA'] !== null ? autolinker.link(feature.properties['CT24_AREA'].toLocaleString()) : '') + '</td>\
                     </tr>\
                 </table>';
             layer.bindPopup(popupContent, {maxHeight: 400});
@@ -132,7 +131,7 @@
                 fill: true,
                 fillOpacity: 1,
                 fillColor: 'rgba(197,16,200,1.0)',
-                interactive: true,
+                interactive: false,
             }
         }
         map.createPane('pane_Vigneti_2');
@@ -140,7 +139,7 @@
         map.getPane('pane_Vigneti_2').style['mix-blend-mode'] = 'normal';
         var layer_Vigneti_2 = new L.geoJson(json_Vigneti_2, {
             attribution: '',
-            interactive: true,
+            interactive: false,
             dataVar: 'json_Vigneti_2',
             layerName: 'layer_Vigneti_2',
             pane: 'pane_Vigneti_2',
