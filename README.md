@@ -10,7 +10,7 @@ Segue una descrizione dei contenuti
 
 Contiene i dati per quanto riguarda le aziende di allevamento bovini e nello specifico i bovini da latte
 
-* `data/Cowmilk` contiene i file coi dati degli allevamenti bovini. Tutti i file sono **copyright** dell'ASL
+* `data/Cowmilk` contiene i file coi dati degli allevamenti bovini. Tutti i file sono **copyright** dell'ASL Napoli 3 Sud
 * `data/Cowmilk/originalCSV` contiene i file originali forniti dall'ASL Napoli 3 sud
 * `data/Cowmilk/originalCSV/Allevamenti bovini da latte_ Monti Lattari.xls` contiene i dati tabulari di tutti gli allevamenti bovini avente tipologia produttiva da latte ricadenti nei comuni siti nel parco dei monti lattari;
 * `data/Cowmilk/originalCSV/AllevamentoBovini.csv` è l'esportazione in csv del precedente file con modifiche minori per facilitare il lavoro di pulizia dei dati
